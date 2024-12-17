@@ -1,4 +1,6 @@
-
+.hero-content-left{
+    margin-top: 100px !important;
+}
 .claro_custom_logo{
     width: 120px;
 }
@@ -6,7 +8,7 @@
     width: 100%;
 }
 .claro_custom_header{
-    padding: 45px 0;
+    padding: 20px;
 }
 :root {
     --primary-color: #000;
@@ -21,3 +23,15 @@
     display: flex;
     gap: 20px;
 }
+@media screen and (max-width: 768px) {
+   
+.claro_custom_logo{
+    width: 80px;
+    padding-left: 10px;
+}
+.claro_custom_header{
+    padding: 20px ;
+}
+        
+  }
+

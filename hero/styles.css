@@ -31,30 +31,45 @@
 .calro_hero_main_image img {
   width: 100%;
 }
-.carosel_container {
-  min-height: 150px;
-  max-width: 80%;
-  background-color: var(--light-gray-bg);
-  border-radius: 20px;
-  display: flex;
+
+.carosel_item {
+  background-color: #f0f0f0;
 }
-.hero_carosel_container {
-  padding: 20px;
-}
-.carosel_container img {
-  width: 250px;
-  height: 100%;
-  min-height: 150px;
-  object-fit: cover;
-}
+
 .carosel_container p {
   font-size: 18px;
-  font-weight: 25px;
+  font-weight: 500;
 }
+
 .carosel_container h1 {
   font-size: 24px;
-  font-weight: 28px;
+  font-weight: 600;
 }
+
+.hero_carousel .slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.hero_carousel .slick-prev, .hero_carousel .slick-next {
+  z-index: 10;
+}
+
+.hero_carousel .slick-prev {
+  left: -40px;
+}
+
+.hero_carousel .slick-next {
+  right: -40px;
+}
+
+.hero_carousel .slick-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .product_tag {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -112,11 +127,7 @@
     gap: 10px;
     margin-bottom: 4rem;
 }
-.horizontal_product_image{
-     /* width: 100%; */
-    /* max-width: 300px; */
 
-}
 .horizontal_product_image img{
   width: 100%;
 }
@@ -149,4 +160,48 @@
 }
 .horizontal_product_wrapper{
   background-color: #f0f0f0;
+}
+
+
+@media screen and (max-width : 900px) {
+  .first_product_tag {
+    top: 55%;
+    left: 40%;
+    position: absolute;
+    transform: translate(-70%, -55%);
+  }
+  .second_product_tag {
+    top: 90%;
+    left: 30%;
+    position: absolute;
+    transform: translate(-30%, -90%);
+  }
+  .third_product_tag {
+    top: 73%;
+    left: 80%;
+    position: absolute;
+    transform: translate(-70%, -80%);
+  }
+}
+
+
+@media screen and (min-width : 900px) {
+  .first_product_tag {
+    top: 65%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -65%);
+  }
+  .second_product_tag {
+    top: 96%;
+    left: 30%;
+    position: absolute;
+    transform: translate(-30%, -96%);
+  }
+  .third_product_tag {
+    top: 80%;
+    left: 80%;
+    position: absolute;
+    transform: translate(-70%, -80%);
+  }
 }

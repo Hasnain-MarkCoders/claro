@@ -25,18 +25,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <!-- Include jQuery (Slick depends on jQuery) -->
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+
   </head>
 
   <body>
     <!-- header -->
     <div
-      class="claro_custom_header center_container d-flex justify-content-between"
+      class="claro_custom_header  center_container align-items-center d-flex justify-content-between "
     >
       <div class="claro_custom_logo">
         <img src="./assets/claro_logo.png" />
       </div>
 
-      <ul class="claro_navbar-nav mx-auto">
+      <ul class="claro_navbar-nav mx-auto d-none d-xl-flex">
         <li class="claro_nav-item">
           <a class="nav-link active" href="#">Home</a>
         </li>
@@ -56,7 +62,7 @@
           <a class="nav-link" href="#">Sale</a>
         </li>
       </ul>
-      <div class="header_icons">
+      <div class="header_icons d-none d-xl-flex">
         <button
           type="button"
           class="btn custom_circle_btn_padding custom_gray_bg rounded-circle"
@@ -77,13 +83,42 @@
           Sign in
         </button>
       </div>
+      <button class="ham-burger d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list"></i></button>
+
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="claro_navbar-nav mx-auto flex-column">
+            <li class="claro_nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="claro_nav-item">
+              <a class="nav-link" href="#">Summer Looks</a>
+            </li>
+            <li class="claro_nav-item">
+              <a class="nav-link" href="#">Winter Looks</a>
+            </li>
+            <li class="claro_nav-item">
+              <a class="nav-link" href="#">Abaya's Looks</a>
+            </li>
+            <li class="claro_nav-item">
+              <a class="nav-link" href="#">Ramadhan Looks</a>
+            </li>
+            <li class="claro_nav-item">
+              <a class="nav-link" href="#">Sale</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- home_page hero_section -->
-    <div class="home_page_hero_section center_container px-4 mb-md">
-      <div class="row">
-        <!-- Left Content -->
-        <div class="col-lg-5 hero-content order-2 order-lg-1">
+    <div class="home_page_hero_section container px-4 mb-md">
+      <div class="row g-4">
+        <div class="col-lg-5 hero-content-left order-2 order-lg-1">
           <div class="d-flex align-items-center mb-3">
             <div class="avatar-group">
               <img
@@ -105,7 +140,7 @@
             <span class="ms-4 products-sold">700k+ Products Sold</span>
           </div>
           <div class="hero_tag_line_container d-flex flex-column gap-3 mb-4">
-            <h1 class="heading">
+            <h1 class=" heading ">
               Curating the
               <br />
 
@@ -119,25 +154,36 @@
           >
             Explore Collection
           </button>
-          <div class="carosel_container mt-5">
-            <img src="./assets/home_page_hero_modal.png" alt="" />
-            <div
-              class="hero_carosel_container d-flex flex-column justify-content-between"
-            >
-              <div>
-                <h1>JANE OF THE VALLEY</h1>
-                <p>Women Collection</p>
-              </div>
-              <div>
-                <button
-                  type="button"
-                  class="btn btn-dark rounded-pill Claro_custom_btn_padding"
-                >
-                  See More
-                </button>
-              </div>
+          <div class="mt-5 d-none d-xxl-flex">
+            <div class="row hero_carousel">
+                <div class="col-12 carosel_container">
+                    <!-- Carousel Item 1 -->
+                    <div class="overflow-hidden rounded-4 carosel_item">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="img">
+                                    <img class="w-100" src="./assets/home_page_hero_modal.png" alt="Hero Image" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="hero_carosel_container h-100 py-4 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h1>JANE OF THE VALLEY</h1>
+                                        <p>Women Collection</p>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-dark rounded-pill Claro_custom_btn_padding">
+                                            See More
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </div>
+        
         </div>
         <div class="col-lg-7 calro_hero_main_image order-2 order-lg-1">
           <img src="./assets/home_page_hero_modal.png" />
@@ -227,10 +273,10 @@
     </div>
     <!-- heading with filter button -->
     <div
-    style="margin-bottom: 4rem;"
-      class="heading_with_filter d-flex justify-content-between center_container "
+      style="margin-bottom: 4rem"
+      class="heading_with_filter mobile_tablet_padding d-flex justify-content-between align-items-center center_container flex-wrap gap-4"
     >
-      <h1 class="heading_with_filter">Best Seller</h1>
+      <h1 class="heading_with_filter claro_heading">Best Seller</h1>
       <div>
         <button
           type="button"
@@ -240,110 +286,98 @@
         </button>
       </div>
     </div>
-    <div class="container mb-md">
-        <div class="row">
-            <div class="col-3">
-                <div class="row">
-                    <div class="col-12">
-                        <img class="col-12" src="./assets/portrait_product_image.png" />
-                        <div class="d-flex justify-content-between py-4">
-                          <h1>
-                              Roa Crop Top
-                          </h1>
-                          <button
-                          type="button"
-                          class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                        >
-                          <i class="bi bi-plus text-white "></i>
-                        </button>
-                        
-                        
-                    </div>
-                    <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                    <p class="product_price">$58.00</p>
-
-                    </div>
-                </div>
+    <div class="container  mb-md">
+      <div class="row mobile_tablet_padding">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <img class="col-12" src="./assets/portrait_product_image.png" />
+              <div class="d-flex justify-content-between py-4">
+                <h1>Roa Crop Top</h1>
+                <button
+                  type="button"
+                  class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                >
+                  <i class="bi bi-plus text-white"></i>
+                </button>
+              </div>
+              <p style="font-size: 14px">
+                ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+              </p>
+              <p class="product_price">$58.00</p>
             </div>
-            <div class="col-3">
-                <div class="row">
-                    <div class="col-12">
-                        <img class="col-12" src="./assets/portrait_product_image.png" />
-                        <div class="d-flex justify-content-between py-4">
-                          <h1>
-                              Roa Crop Top
-                          </h1>
-                          <button
-                          type="button"
-                          class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                        >
-                          <i class="bi bi-plus text-white "></i>
-                        </button>
-                        
-                        
-                    </div>
-                    <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                    <p class="product_price">$58.00</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="row">
-                    <div class="col-12">
-                        <img class="col-12" src="./assets/portrait_product_image.png" />
-                        <div class="d-flex justify-content-between py-4">
-                          <h1>
-                              Roa Crop Top
-                          </h1>
-                          <button
-                          type="button"
-                          class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                        >
-                          <i class="bi bi-plus text-white "></i>
-                        </button>
-                        
-                        
-                    </div>
-                    <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                    <p class="product_price">$58.00</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="row">
-                    <div class="col-12">
-                        <img class="col-12" src="./assets/portrait_product_image.png" />
-                        <div class="d-flex justify-content-between py-4">
-                          <h1>
-                              Roa Crop Top
-                          </h1>
-                          <button
-                          type="button"
-                          class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                        >
-                          <i class="bi bi-plus text-white "></i>
-                        </button>
-                        
-                        
-                    </div>
-                    <p >⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                    <p class="product_price">$58.00</p>
-
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <img class="col-12" src="./assets/portrait_product_image.png" />
+              <div class="d-flex justify-content-between py-4">
+                <h1>Roa Crop Top</h1>
+                <button
+                  type="button"
+                  class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                >
+                  <i class="bi bi-plus text-white"></i>
+                </button>
+              </div>
+              <p style="font-size: 14px">
+                ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+              </p>
+              <p class="product_price">$58.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <img class="col-12" src="./assets/portrait_product_image.png" />
+              <div class="d-flex justify-content-between py-4">
+                <h1>Roa Crop Top</h1>
+                <button
+                  type="button"
+                  class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                >
+                  <i class="bi bi-plus text-white"></i>
+                </button>
+              </div>
+              <p style="font-size: 14px">
+                ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+              </p>
+              <p class="product_price">$58.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <img class="col-12" src="./assets/portrait_product_image.png" />
+              <div class="d-flex justify-content-between py-4">
+                <h1>Roa Crop Top</h1>
+                <button
+                  type="button"
+                  class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                >
+                  <i class="bi bi-plus text-white"></i>
+                </button>
+              </div>
+              <p>⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
+              <p class="product_price">$58.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- heading with filter button -->
     <div
-  
-      class="heading_with_filter d-flex justify-content-between center_container "
+      class="heading_with_filter flex-wrap gap-4 mobile_tablet_padding d-flex justify-content-between align-items-center center_container"
     >
-      <h1 class="heading_with_filter">New Arrival</h1>
+      <h1 style="margin-bottom: 4rem" class="heading_with_filter claro_heading">
+        New Arrival
+      </h1>
       <div>
         <button
+          style="width: max-content"
           type="button"
           class="btn btn-dark rounded-pill Claro_custom_btn_padding d-block"
         >
@@ -352,226 +386,631 @@
       </div>
     </div>
     <!-- horizontal products  -->
-    <div class=" container mb-md ">
-        <div class="row gap-4 mb-4">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-5">
-                <div class="row bg-light-gray justify-content-between  rounded-5 p-2 py-3">
-                    <img class="col-6 rounded-5" src="./assets/horizontaol_product_image.png" alt="">
-                    <div class="col-6 d-flex justify-content-between flex-column">
-
-                        <div>
-                            <div class="d-flex justify-content-between">
-            
-                                <h1>
-                                    Roa Crop Top
-                                </h1>
-                                <button
-                                type="button"
-                                class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                              >
-                                <i class="bi bi-plus text-white "></i>
-                              </button>
-                            </div>
-                            <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                        </div>
-                        <p class="product_price">$58.00</p>
-                    </div>
+    <div class="container mb-md">
+      <div class="row mobile_tablet_padding g-4">
+        <div class="col-12 col-lg-6">
+          <div class="custom_gray_bg p-3 rounded-4">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div>
+                  <img
+                    class="w-100 rounded-4"
+                    src="./assets/horizontaol_product_image.png"
+                    alt=""
+                  />
                 </div>
-
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-5">
-                <div class="row bg-light-gray justify-content-between  rounded-5 p-2 py-3">
-                    <img class="col-6 rounded-5" src="./assets/horizontaol_product_image.png" alt="">
-                    <div class="col-6 d-flex justify-content-between flex-column">
-
-                        <div>
-                            <div class="d-flex justify-content-between">
-            
-                                <h1>
-                                    Roa Crop Top
-                                </h1>
-                                <button
-                                type="button"
-                                class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                              >
-                                <i class="bi bi-plus text-white "></i>
-                              </button>
-                            </div>
-                            <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                        </div>
-                        <p class="product_price">$58.00</p>
+              </div>
+              <div class="col-12 col-md-6">
+                <div
+                  class="d-flex flex-column justify-content-between h-100 py-2"
+                >
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <h1 class="horizontal_product_card_heading">
+                        Roa Crop Top
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                      >
+                        <i class="bi bi-plus text-white"></i>
+                      </button>
                     </div>
+                    <p style="font-size: 18px">
+                      ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+                    </p>
+                  </div>
+                  <p class="product_price">$58.00</p>
                 </div>
-
+              </div>
             </div>
+          </div>
         </div>
-        <div class="row gap-4">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-5">
-                <div class="row bg-light-gray justify-content-between  rounded-5 p-2 py-3">
-                    <img class="col-6 rounded-5" src="./assets/horizontaol_product_image.png" alt="">
-                    <div class="col-6 d-flex justify-content-between flex-column">
 
-                        <div>
-                            <div class="d-flex justify-content-between">
-            
-                                <h1>
-                                    Roa Crop Top
-                                </h1>
-                                <button
-                                type="button"
-                                class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                              >
-                                <i class="bi bi-plus text-white "></i>
-                              </button>
-                            </div>
-                            <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                        </div>
-                        <p class="product_price">$58.00</p>
-                    </div>
+        <div class="col-12 col-lg-6">
+          <div class="custom_gray_bg p-3 rounded-4">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div>
+                  <img
+                    class="w-100 rounded-4"
+                    src="./assets/horizontaol_product_image.png"
+                    alt=""
+                  />
                 </div>
-
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-5">
-                <div class="row bg-light-gray justify-content-between  rounded-5 p-2 py-3">
-                    <img class="col-6 rounded-5" src="./assets/horizontaol_product_image.png" alt="">
-                    <div class="col-6 d-flex justify-content-between flex-column">
-
-                        <div>
-                            <div class="d-flex justify-content-between">
-            
-                                <h1>
-                                    Roa Crop Top
-                                </h1>
-                                <button
-                                type="button"
-                                class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                              >
-                                <i class="bi bi-plus text-white "></i>
-                              </button>
-                            </div>
-                            <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                        </div>
-                        <p class="product_price">$58.00</p>
+              </div>
+              <div class="col-12 col-md-6">
+                <div
+                  class="d-flex flex-column justify-content-between h-100 py-2"
+                >
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <h1 class="horizontal_product_card_heading">
+                        Roa Crop Top
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                      >
+                        <i class="bi bi-plus text-white"></i>
+                      </button>
                     </div>
+                    <p style="font-size: 18px">
+                      ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+                    </p>
+                  </div>
+                  <p class="product_price">$58.00</p>
                 </div>
-
+              </div>
             </div>
+          </div>
         </div>
-       
-    </div>
-    
-  <!-- heading with filter button -->
-  <div
-  style="margin-bottom: 4rem;"
-    class="heading_with_filter d-flex justify-content-between center_container "
-  >
-    <h1 class="heading_with_filter">All Products</h1>
-    <div>
-      <button
-        type="button"
-        class="btn btn-dark rounded-pill Claro_custom_btn_padding d-block"
-      >
-        See All Items
-      </button>
-    </div>
-  </div>
-  <div class="container mb-md">
-      <div class="row">
-          <div class="col-3">
-              <div class="row">
-                  <div class="col-12">
-                      <img class="col-12" src="./assets/portrait_product_image.png" />
-                      <div class="d-flex justify-content-between py-4">
-                        <h1>
-                            Roa Crop Top
-                        </h1>
-                        <button
+
+        <div class="col-12 col-lg-6">
+          <div class="custom_gray_bg p-3 rounded-4">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div>
+                  <img
+                    class="w-100 rounded-4"
+                    src="./assets/horizontaol_product_image.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div
+                  class="d-flex flex-column justify-content-between h-100 py-2"
+                >
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <h1 class="horizontal_product_card_heading">
+                        Roa Crop Top
+                      </h1>
+                      <button
                         type="button"
                         class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
                       >
-                        <i class="bi bi-plus text-white "></i>
+                        <i class="bi bi-plus text-white"></i>
                       </button>
-                      
-                      
+                    </div>
+                    <p style="font-size: 18px">
+                      ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+                    </p>
                   </div>
-                  <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
                   <p class="product_price">$58.00</p>
-
-                  </div>
+                </div>
               </div>
+            </div>
           </div>
-          <div class="col-3">
-              <div class="row">
-                  <div class="col-12">
-                      <img class="col-12" src="./assets/portrait_product_image.png" />
-                      <div class="d-flex justify-content-between py-4">
-                        <h1>
-                            Roa Crop Top
-                        </h1>
-                        <button
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="custom_gray_bg p-3 rounded-4">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div>
+                  <img
+                    class="w-100 rounded-4"
+                    src="./assets/horizontaol_product_image.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div
+                  class="d-flex flex-column justify-content-between h-100 py-2"
+                >
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <h1 class="horizontal_product_card_heading">
+                        Roa Crop Top
+                      </h1>
+                      <button
                         type="button"
                         class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
                       >
-                        <i class="bi bi-plus text-white "></i>
+                        <i class="bi bi-plus text-white"></i>
                       </button>
-                      
-                      
+                    </div>
+                    <p style="font-size: 18px">
+                      ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+                    </p>
                   </div>
-                  <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
                   <p class="product_price">$58.00</p>
-
-                  </div>
+                </div>
               </div>
+            </div>
           </div>
-          <div class="col-3">
-              <div class="row">
-                  <div class="col-12">
-                      <img class="col-12" src="./assets/portrait_product_image.png" />
-                      <div class="d-flex justify-content-between py-4">
-                        <h1>
-                            Roa Crop Top
-                        </h1>
-                        <button
-                        type="button"
-                        class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                      >
-                        <i class="bi bi-plus text-white "></i>
-                      </button>
-                      
-                      
-                  </div>
-                  <p style="font-size: 14px;">⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                  <p class="product_price">$58.00</p>
-
-                  </div>
-              </div>
-          </div>
-          <div class="col-3">
-              <div class="row">
-                  <div class="col-12">
-                      <img class="col-12" src="./assets/portrait_product_image.png" />
-                      <div class="d-flex justify-content-between py-4">
-                        <h1>
-                            Roa Crop Top
-                        </h1>
-                        <button
-                        type="button"
-                        class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
-                      >
-                        <i class="bi bi-plus text-white "></i>
-                      </button>
-                      
-                      
-                  </div>
-                  <p >⭐⭐⭐⭐⭐ <span>(3K Reviews)</span></p>
-                  <p class="product_price">$58.00</p>
-
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
-  </div>
-   
+    </div>
+
+    <!-- heading with filter button -->
+    <div
+      style="margin-bottom: 4rem"
+      class="heading_with_filter flex-wrap gap-4 mobile_tablet_padding d-flex justify-content-between align-items-center center_container"
+    >
+      <h1 class="heading_with_filter claro_heading">
+        All Products <span>(1107 Items)</span>
+      </h1>
+      <div>
+        <button
+          style="width: max-content"
+          type="button"
+          class="btn btn-dark rounded-pill Claro_custom_btn_padding d-block"
+        >
+          See All Items
+        </button>
+      </div>
+    </div>
+    <div class="container mb-md">
+      <div class="row mobile_tablet_padding">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div>
+            <div class="row">
+              <div class="col-12">
+                <div>
+                  <img class="col-12" src="./assets/all_products_model.png" />
+                  <div class="d-flex justify-content-between py-4">
+                    <h1>Roa Crop Top</h1>
+                    <button
+                      type="button"
+                      class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                    >
+                      <i class="bi bi-plus text-white"></i>
+                    </button>
+                  </div>
+                  <p style="font-size: 14px">
+                    ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+                  </p>
+                  <p class="product_price">$58.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div>
+            <div class="row">
+              <div class="col-12">
+                <div>
+                  <img class="col-12" src="./assets/all_products_model.png" />
+                  <div class="d-flex justify-content-between py-4">
+                    <h1>Roa Crop Top</h1>
+                    <button
+                      type="button"
+                      class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                    >
+                      <i class="bi bi-plus text-white"></i>
+                    </button>
+                  </div>
+                  <p style="font-size: 14px">
+                    ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+                  </p>
+                  <p class="product_price">$58.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div>
+            <div class="row">
+              <div class="col-12">
+                <div>
+                  <img class="col-12" src="./assets/all_products_model.png" />
+                  <div class="d-flex justify-content-between py-4">
+                    <h1>Roa Crop Top</h1>
+                    <button
+                      type="button"
+                      class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                    >
+                      <i class="bi bi-plus text-white"></i>
+                    </button>
+                  </div>
+                  <p style="font-size: 14px">
+                    ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+                  </p>
+                  <p class="product_price">$58.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div>
+            <div class="row">
+              <div class="col-12">
+                <div>
+                  <img class="col-12" src="./assets/all_products_model.png" />
+                  <div class="d-flex justify-content-between py-4">
+                    <h1>Roa Crop Top</h1>
+                    <button
+                      type="button"
+                      class="btn custom_product_icon_button_dimensions bg-dark rounded-circle"
+                    >
+                      <i class="bi bi-plus text-white"></i>
+                    </button>
+                  </div>
+                  <p style="font-size: 14px">
+                    ⭐⭐⭐⭐⭐ <span>(3K Reviews)</span>
+                  </p>
+                  <p class="product_price">$58.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- what make claro different section -->
+    <div class="container mb-md">
+      <div class="row ">
+        <div class="col-12 col-xl-6">
+          <div class="bg-dark rounded-4 p-5 h-100">
+            <h1 class="white_heading mb-5">
+              What Makes Claro
+              <br />
+              Different
+            </h1>
+            <div class="row">
+              <div class="col-12 col-xl-4">
+                <div>
+                  <h2
+                    style="font-size: 18px; font-weight: 600"
+                    class="text-white"
+                  >
+                    Ethically Sourced <br />
+                    Materials
+                  </h2>
+                  <hr class="text-white" />
+                  <p
+                    style="font-size: 18px; font-weight: 400"
+                    class="text-white"
+                  >
+                    We prioritize ethically sourced materials to ensure that
+                    every piece contributes to a better future for fashion.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-xl-4">
+                <div>
+                  <h2
+                    style="font-size: 18px; font-weight: 600"
+                    class="text-white"
+                  >
+                    Supporting Local <br />Designers
+                  </h2>
+                  <hr class="text-white" />
+                  <p
+                    style="font-size: 18px; font-weight: 400"
+                    class="text-white"
+                  >
+                    Proudly featuring collections from talented local designers,
+                    helping to foster creativity and sustainable growth.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-12 col-xl-4">
+                <div>
+                  <h2
+                    style="font-size: 18px; font-weight: 600"
+                    class="text-white"
+                  >
+                    Eco-Friendly Certified Fashion Products
+                  </h2>
+                  <hr class="text-white" />
+                  <p
+                    style="font-size: 18px; font-weight: 400"
+                    class="text-white"
+                  >
+                    We’re committed to sustainability by using environmentally
+                    friendly materials and practices in our production
+                    processes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-xl-3">
+          <div>
+            <div class="row">
+              <div class="col-12">
+                <div>
+                  <img
+                    style="max-height: 500px"
+                    class="col-12"
+                    src="./assets/home_page_black_abaya.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-xl-3">
+          <div>
+            <div class="row">
+              <div class="col-12">
+                <div>
+                  <img
+                    style="max-height: 500px"
+                    class="col-12"
+                    src="./assets/home_page_black_abaya.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- exclusive order section -->
+
+    <div class="container mb-md">
+      <div class="row p-0 m-0 rounded">
+        <div class="col-12 col-md-4 p-0 m-0">
+          <img
+            class="w-100 h-100 rounded-start"
+            src="./assets/exclusive_offer_model.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="py-5 ps-5 col-12 col-md-8 bg-dark rounded-end d-flex flex-column justify-content-center gap-3"
+        >
+          <h1 class="text-white claro_heading">
+            Exclusive Offer: Up to 35% <br />
+            off, only for this month
+          </h1>
+          <p style="font-size: 20px; line-height: 28px" class="text-white">
+            Shop now and enjoy up to 50% off on selected items. Limited time
+            only!
+          </p>
+          <div>
+            <button
+              type="button"
+              class="btn bg-white text-dark rounded-pill px-4 py-2"
+            >
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-md">
+      <h1 style="margin-bottom: 50px" class="text-center heading_with_filter">
+        Claro Lookbook
+      </h1>
+      <div
+        style="max-width: 1200px; margin: 0 auto 70px auto"
+        class="button_container d-flex flex-wrap gap-4 justify-content-evenly"
+      >
+        <button type="button" class="btn btn-dark rounded-pill px-4 py-2">
+          All Looks
+        </button>
+        <button type="button" class="btn btn-dark rounded-pill px-4 py-2">
+          Summer Looks
+        </button>
+        <button type="button" class="btn btn-dark rounded-pill px-4 py-2">
+          Abayas Looks
+        </button>
+        <button type="button" class="btn btn-dark rounded-pill px-4 py-2">
+          Ramadhan Looks
+        </button>
+        <button type="button" class="btn btn-dark rounded-pill px-4 py-2">
+          Winter Looks
+        </button>
+        <button type="button" class="btn btn-dark rounded-pill px-4 py-2">
+          Sale
+        </button>
+      </div>
+      <div class="row mobile_tablet_padding g-4 ">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <img class="col-12" src="./assets/portrait_product_image.png" />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <img class="col-12" src="./assets/portrait_product_image.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <img class="col-12" src="./assets/portrait_product_image.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="row">
+            <div class="col-12">
+              <img class="col-12" src="./assets/portrait_product_image.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- marquee -->
+    <div class="marquee_container">
+      <div class="marquee">
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+      </div>
+      <div class="marquee">
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+      </div>
+      <div class="marquee">
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+      </div>
+      <div class="marquee">
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+        <h1>Winter Sale</h1>
+        <div><img src="./assets/star.png" alt="Star" /></div>
+        <h1>Winter Is Coming</h1>
+      </div>
+    </div>
+    <div class="claro_custom_footer p-4 bg-black container-fluid position-relative">
+      <div class="container">
+
+        <div class="row footer_custom_gap">
+          <div class="col-12 col-lg-6">
+            <div class="p-4">
+  
+              <div class="row">
+                <div class="">
+                  <div class="footer_logo_container d-flex flex-column gap-3">
+                    <img class="col-6 col-md-4 col-lg-3" src="./assets/claro_white_logo.png" alt="">
+                    <p class="text-white col-12 col-lg-6">Subscribe to our newsletter and enjoy our special promo</p>
+                    <div class="footer_input_container col-12 col-lg-6 position-relative">
+                      <input class="w-100 footer_input rounded-pill py-2" type="text" name="" placeholder="Your Email" id="">
+                    <button type="button" class="btn py-2 border-0 footer-search_button btn-dark  "><i class="bi bi-send"></i></button>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <div class="p-4">
+                  <a href="#" class="footer_link_heading d-block mb-5"
+                    >SHOP NOW</a
+                  >
+                  <ul class="footer_links_list">
+                    <li class="footer_links_list_item">
+                      <a href="#">Summer looks </a>
+                    </li>
+                    <li class="footer_links_list_item">
+                      <a href="#">Winter Looks</a>
+                    </li>
+                    <li class="footer_links_list_item">
+                      <a href="#">Abaya’s Looks</a>
+                    </li>
+  
+                    <li class="footer_links_list_item">
+                      <a href="#">Ramadhan Looks</a>
+                    </li>
+  
+                    <li class="footer_links_list_item">
+                      <a href="#">Sale</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="p-4">
+                  <a href="#" class="footer_link_heading d-block mb-5"
+                    >CONTACT</a
+                  >
+                  <ul class="footer_links_list">
+                    <li class="footer_links_list_item">
+                      <a href="#">(62) 1211 1121 </a>
+                    </li>
+                    <li class="footer_links_list_item">
+                      <a href="#">customer@claro.com</a>
+                    </li>
+                    <li class="footer_links_list_item">
+                      <a href="#">Jl. Bintangan 20, Malingga City
+                        Northern Province</a>
+                    </li>
+  
+                
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="text-white" />
+        <div class="row justify-content-between p-4">
+          <div class="col-12 col-lg-3">
+            <div>
+            <p class="text-white">2024 claro clothing all right reversed</p>
+
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div>
+              <div class="row">
+
+                <p class="text-white col-12 col-lg-6">Privacy Policy</p>
+                <p class="text-white col-12 col-lg-6">Terms & Condition</p>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="footer_transparent_logo">
+          <img class="w-100" src="./assets/claro_transparent_logo.png" alt="">
+        </div>
+      </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./app.js"></script>
   </body>
