@@ -1,0 +1,41 @@
+
+:root , *{
+    --light-gray-bg: #F0F0F0;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+  }
+.center_container{
+    max-width: 1800px;
+    margin: 0 auto;
+}
+.bg-light-gray{
+    background-color: var(--light-gray-bg);
+}
+.Claro_custom_btn_padding{
+
+    min-width: 70px;
+    padding: 12px 26px !important;
+}
+.custom_circle_btn_padding{
+    min-width: 50px;
+    height: 50px;
+}
+.custom_gray_bg{
+background-color: var(--light-gray-bg) !important;
+}
+
+.heading{
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 96px;
+}
+.heading_with_filter{
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 96px;
+}
+.container{
+    max-width: 1800px !important;
+}
+.mb-md{
+    margin-bottom: 250px;
+}

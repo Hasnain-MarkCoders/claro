@@ -1,0 +1,23 @@
+
+.claro_custom_logo{
+    width: 120px;
+}
+.claro_custom_logo img{
+    width: 100%;
+}
+.claro_custom_header{
+    padding: 45px 0;
+}
+:root {
+    --primary-color: #000;
+    --secondary-color: #666;
+}
+.claro_navbar-nav{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.header_icons{
+    display: flex;
+    gap: 20px;
+}
