@@ -1,31 +1,47 @@
-$(document).ready(function() {
-    $('.hero_carousel').slick({
-        infinite: true,          // Enables infinite scroll
-        slidesToShow: 1,         // Always show 1 slide at a time
-        slidesToScroll: 1,       // Scroll 1 slide at a time
-        autoplay: true,          // Enable autoplay
-        autoplaySpeed: 3000,     // Autoplay speed (3 seconds)
-        speed: 500,              // Animation speed (500ms)
-        arrows: true,            // Enable arrows for navigation
-        dots: true,              // Enable dots for navigation
-        centerMode: true,        // Center the active slide for a better visual experience
-        focusOnSelect: true,     // Click to select a slide
-        responsive: [
-            {
-                breakpoint: 1200, // For large tablets and desktops
-                settings: {
-                    slidesToShow: 2,  // Show 2 slides
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 768,  // For small tablets and phones
-                settings: {
-                    slidesToShow: 1,  // Show only 1 image per slide
-                    slidesToScroll: 1,
-                    dots: true         // Show dots on mobile
-                }
-            }
-        ]
-    });
-});
+
+$('.bar').slick({
+  customPaging : function(slider, i) {
+    if(i==0){
+      return '<a class="first_slide">01</a>';
+    }
+    if(i==slider.$slides.length-1){
+      return '<a class="last_slide">'+"0"+slider.$slides.length+'</a>';
+    }
+    
+    return '<a>'+'</a>';
+},
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
