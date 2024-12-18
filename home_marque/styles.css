@@ -34,3 +34,24 @@
       transform: translate3d(-100%, 0, 0);
     }
   }
+  @media screen and (max-width : 992px) {
+    .marquee_container {
+      padding: 3rem 0;
+    }
+  
+    .marquee h1{
+      font-size: 40px;
+    }
+  }
+  
+
+  @media screen and (max-width : 768px) {
+    .marquee_container {
+      padding: 2rem 0;
+    }
+  
+    .marquee h1{
+      font-size: 30px;
+    }
+  }
+  
