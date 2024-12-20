@@ -160,4 +160,56 @@ line-height: 76px
 
 
 
- 
+    .hover-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      
+      img.col-12 {
+        display: block;
+        width: 100%;
+      }
+      
+      .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 8px;
+      }
+      
+   
+     
+      .hover-container:hover .hover-overlay {
+        opacity: 1;
+        backdrop-filter: blur(7px);
+      }
+      
+      .hover-overlay .hover-text h2 {
+        color: white;
+        margin-bottom: 10px;
+        font-size: clamp(1.5rem, 2vw, 3.5rem); /* Dynamically adjusts between minimum and maximum sizes */
+        text-align: center; /* Aligns text for all devices */
+        word-wrap: break-word; /* Prevents text overflow */
+        line-height: 1.4; /* Ensures consistent readability */
+    }
+    
+    .hover-overlay .hover-text button {
+        border: none;
+        font-size: clamp(.8rem, 1vw, 1.3rem) !important;
+        padding: clamp(0.5rem, 1.2vw, .8rem) clamp(1rem, 3vw, 2rem) !important; /* Dynamically adjusts padding */
+        text-align: center; /* Ensures proper alignment */
+        border-radius: 50px; /* Keeps the pill shape consistent */
+        display: flex; /* Ensures layout integrity */
+        justify-content: center; /* Centers text horizontally */
+        align-items: center; /* Centers text vertically */
+        margin: 1rem auto; /* Ensures consistent spacing around the button */
+    }
