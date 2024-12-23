@@ -1,0 +1,34 @@
+{
+    "name": "CLARO",
+    "description": "A custom theme built with HTML, CSS, and JS",
+    "version": "1.0.0",
+    "author": "Your Name",
+    "license": "MIT",
+    "sections": {
+      "home": {
+        "file": "index.html",
+        "label": "Home"
+      },
+      "abaya_look": {
+        "file": "abaya_look/index.html",
+        "label": "Abaya Look"
+      },
+      "ramadhan_look": {
+        "file": "ramadhan_look/index.html",
+        "label": "Ramadhan Look"
+      },
+      "sale": {
+        "file": "sale/index.html",
+        "label": "Sale"
+      },
+      "summer_look": {
+        "file": "summer_look/index.html",
+        "label": "Summer Look"
+      },
+      "winter_look": {
+        "file": "winter_look/index.html",
+        "label": "Winter Look"
+      }
+    }
+  }
+  
