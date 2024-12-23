@@ -222,3 +222,6 @@ line-height: 76px
         background-color: #424649;
         color: white;   
     }
+    .claro_carousel_radius{
+        border-radius: 25px;
+    }
