@@ -213,3 +213,12 @@ line-height: 76px
         align-items: center; /* Centers text vertically */
         margin: 1rem auto; /* Ensures consistent spacing around the button */
     }
+
+    .btn.btn-dark.outlined{
+        background-color: white;
+        color: black;   
+    }
+    .btn.btn-dark.outlined:hover{
+        background-color: #424649;
+        color: white;   
+    }
