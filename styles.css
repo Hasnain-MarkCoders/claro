@@ -13,7 +13,7 @@
 }
 .btn.btn-dark.outlined{
     background-color: white !important;
-    color: black !important;   
+    color: var(--dark-bg) !important;   
 }
 .btn.btn-dark.outlined:hover{
     background-color: var(--dark-bg) !important;
@@ -100,9 +100,12 @@ line-height: 76px
     top: 0px;
     right: 0px;
     position: absolute;
-    background-color: #9B9B9B !important;
+    background-color: var(--light-gray-bg) !important;
     height: 100%;
     min-width: 50px
+}
+.footer-search_button.btn-dark i{
+    color: var(--dark-bg);
 }
 .footer_input{
     border: 0;
@@ -128,7 +131,7 @@ line-height: 76px
 }
 .ham-burger i{
     font-size: 30px;
-    color: black;
+    color: var(--dark-bg);
 }
 
 @media screen and (max-width: 768px) {
@@ -169,7 +172,7 @@ line-height: 76px
            }
     }
     .nav-link.active{
-        color: black;
+        color: var(--dark-bg);
         font-weight: 800;
     }
 
