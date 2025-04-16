@@ -1,20 +1,20 @@
 .hero-content-left{
     margin-top: 100px !important;
 }
-.claro_custom_logo{
+.Archivist_custom_logo{
     width: 120px;
 }
-.claro_custom_logo img{
+.Archivist_custom_logo img{
     width: 100%;
 }
-.claro_custom_header{
+.Archivist_custom_header{
     padding: 20px;
 }
 :root {
     --primary-color: #000;
     --secondary-color: #666;
 }
-.claro_navbar-nav{
+.Archivist_navbar-nav{
     list-style: none;
     display: flex;
     gap: 30px;
@@ -25,11 +25,11 @@
 }
 @media screen and (max-width: 768px) {
    
-.claro_custom_logo{
+.Archivist_custom_logo{
     width: 80px;
     padding-left: 10px;
 }
-.claro_custom_header{
+.Archivist_custom_header{
     padding: 20px ;
 }
         

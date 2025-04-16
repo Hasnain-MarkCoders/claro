@@ -1,8 +1,24 @@
 
 :root , *{
-    --light-gray-bg: #F0F0F0;
-    font-family: "Plus Jakarta Sans", sans-serif !important;
+    --light-gray-bg: #DAD1C8;
+    --dark-bg:#26292E;
+    font-family: "Merienda", sans-serif !important;
   }
+  .bg-ar-dark{
+    background: var(--dark-bg);
+  }
+  .btn.btn-dark{
+    background-color: var(--dark-bg)!important;
+    color:white !important
+}
+.btn.btn-dark.outlined{
+    background-color: white !important;
+    color: black !important;   
+}
+.btn.btn-dark.outlined:hover{
+    background-color: var(--dark-bg) !important;
+    color: white !important;   
+}
 .center_container{
     max-width: 1800px;
     margin: 0 auto;
@@ -10,7 +26,7 @@
 .bg-light-gray{
     background-color: var(--light-gray-bg);
 }
-.Claro_custom_btn_padding{
+.Archivist_custom_btn_padding{
 
     min-width: 70px;
     padding: 12px 26px !important;
@@ -48,7 +64,7 @@ background-color: var(--light-gray-bg) !important;
     color: white;
     font-size: 55px;
 }
-.claro_heading{
+.Archivist_heading{
 font-size: 55px; 
 line-height: 76px
 }
@@ -78,7 +94,7 @@ line-height: 76px
     color: white;
     text-decoration:none
 }
-.footer-search_button{
+.footer-search_button.btn-dark{
     border-top-right-radius: 100px !important;
     border-bottom-right-radius:100px !important;
     top: 0px;
@@ -116,7 +132,7 @@ line-height: 76px
 }
 
 @media screen and (max-width: 768px) {
-    .claro_heading{
+    .Archivist_heading{
         font-size: 40px; 
         line-height: 40px
         }
@@ -214,14 +230,6 @@ line-height: 76px
         margin: 1rem auto; /* Ensures consistent spacing around the button */
     }
 
-    .btn.btn-dark.outlined{
-        background-color: white;
-        color: black;   
-    }
-    .btn.btn-dark.outlined:hover{
-        background-color: #424649;
-        color: white;   
-    }
-    .claro_carousel_radius{
+    .Archivist_carousel_radius{
         border-radius: 25px;
     }

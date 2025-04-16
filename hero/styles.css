@@ -1,6 +1,9 @@
 :root {
   --light-gray-bg: #f0f0f0;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  /* font-family: "Plus Jakarta Sans", sans-serif;
+   */
+   font-family: "Merienda", sans-serif !important;
+
 }
 .hero {
   min-height: 100vh;

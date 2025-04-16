@@ -1,14 +1,21 @@
+:root{
+  --dark-maroon:#4B0005;
+  --light-gray-bg: #F0F0F0;
+  --dark-bg:#26292E;
+}
+
 .marquee_container {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    background: #000000;
+    background: var(--dark-bg);
     padding: 4rem 0;
   }
 
   .marquee {
     display: inline-block;
     animation: marquee 10s linear infinite;
+    
   }
   .marquee h1{
     font-size: 50px;
