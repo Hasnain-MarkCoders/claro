@@ -1,22 +1,44 @@
 
 :root , *{
-    --light-gray-bg: #DAD1C8;
-    --dark-bg:#26292E;
-    font-family: "Merienda", sans-serif !important;
+    --dark-beige: #DAD1C8;
+    --dark-bg:#121212;
+    --dark-blue:#26292E;
+    --dark-maroon:#4b0005;
+    --light-maroon:rgb(95, 15, 22);
+    --light-blue:rgba(181, 216, 218, .3);
+    --light-beige:rgba(218, 209, 200,.3);
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+
+}
+
+h1{
+    font-family: "TAN - PEARL" !important;
+    line-height: 1.7 !important;
+    
   }
   .bg-ar-dark{
     background: var(--dark-bg);
   }
-  .btn.btn-dark{
-    background-color: var(--dark-bg)!important;
+
+  .btn .text-maroon{
+    color: var(--dark-maroon)!important;
+}
+
+.btn.btn-maroon{
+    background-color: var(--dark-maroon)!important;
     color:white !important
 }
-.btn.btn-dark.outlined{
-    background-color: white !important;
-    color: var(--dark-bg) !important;   
+
+.btn.btn-maroon:hover{
+    background-color: var(--light-maroon) !important;
 }
-.btn.btn-dark.outlined:hover{
-    background-color: var(--dark-bg) !important;
+.btn.btn-maroon.outlined{
+    background-color: white !important;
+    color: var(--dark-maroon) !important;   
+    border: 1px solid var(--dark-maroon);
+}
+.btn.btn-maroon.outlined:hover{
+    background-color: var(--light-maroon) !important;
     color: white !important;   
 }
 .center_container{
@@ -24,7 +46,7 @@
     margin: 0 auto;
 }
 .bg-light-gray{
-    background-color: var(--light-gray-bg);
+    background-color: var(--light-beige);
 }
 .Archivist_custom_btn_padding{
 
@@ -35,9 +57,19 @@
     min-width: 50px;
     height: 50px;
 }
-.custom_gray_bg{
-background-color: var(--light-gray-bg) !important;
+
+.btn.bg-beige:hover{
+background: var(--dark-beige) !important;
+
 }
+
+.bg-beige{
+background: var(--light-beige) !important;
+}
+
+.bg-light-blue{
+    background: var(--light-blue) !important;
+    }
 
 .heading{
     font-weight: 600;
@@ -94,19 +126,20 @@ line-height: 76px
     color: white;
     text-decoration:none
 }
-.footer-search_button.btn-dark{
+.footer-search_button.bg-beige{
     border-top-right-radius: 100px !important;
     border-bottom-right-radius:100px !important;
     top: 0px;
     right: 0px;
     position: absolute;
-    background-color: var(--light-gray-bg) !important;
+    background-color: var(--dark-beige) !important;
     height: 100%;
-    min-width: 50px
+    min-width: 50px;
 }
-.footer-search_button.btn-dark i{
+.footer-search_button.bg-beige i{
     color: var(--dark-bg);
 }
+
 .footer_input{
     border: 0;
     outline: none;

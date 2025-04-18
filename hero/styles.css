@@ -1,8 +1,12 @@
 :root {
-  --light-gray-bg: #f0f0f0;
-  /* font-family: "Plus Jakarta Sans", sans-serif;
-   */
-   font-family: "Merienda", sans-serif !important;
+  --dark-beige: #DAD1C8;
+  --dark-bg:#121212;
+  --dark-blue:#26292E;
+  --dark-maroon:#4b0005;
+  --light-maroon:rgb(95, 15, 22);
+  --light-blue:rgba(181, 216, 218, .3);
+  --light-beige:rgba(218, 209, 200,.3);
+  font-family: "Plus Jakarta Sans", sans-serif !important;
 
 }
 .hero {
@@ -161,7 +165,7 @@
   margin-top: 100px;
   margin-bottom: 100px !important;
 }
-.bar .details h1 {
+.bar .details h2 {
   font-size: 24px;
   line-height: 28px;
   font-weight: 600;
