@@ -49,13 +49,15 @@ $('.bar').slick({
     document.addEventListener('DOMContentLoaded', function () {
       const buttons = document.querySelectorAll('.button_container button');
       const heading = document.getElementById('lookbook-heading');
-      const con = document.querySelector('.row.mobile_tablet_padding.g-4.products');
-      console.log(window.location.pathname)
+      const sections = document.querySelectorAll('.product-section');
   
-      buttons.forEach((button, index) => {
+      // Initialize first section
+      document.querySelector('[data-section="default"]').classList.remove('d-none');
+  
+      buttons.forEach((button) => {
         button.addEventListener('click', () => {
-          const selectedText = button.innerText;
-          heading.textContent = selectedText;
+          const targetSection = button.dataset.section;
+          heading.textContent = button.innerText;
   
           // Update button styles
           buttons.forEach(btn => {
@@ -63,141 +65,17 @@ $('.bar').slick({
           });
           button.classList.remove('outlined');
           button.classList.add('btn-maroon');
-          // Clear existing content
-          con.innerHTML = "";
   
-          // Add product blocks based on button index (index + 1)
-          const count = index + 1;
-  
-          for (let i = 0; i < count; i++) {
-            const html = document.createElement("div");
-            html.className = "col-12 col-md-6 col-lg-3";
-            html.innerHTML = `
-              <div class="row">
-                <div class="col-12">
-                  <div class="hover-container">
-                    <img class="col-12" src=
-                    ${
-                      window.location.pathname ==="/index.html"?
-                      "./assets/portrait_product_image.png"
-                      :"./../assets/portrait_product_image.png"
-
-                    }
-                     />
-                    <div class="hover-overlay">
-                      <div class="hover-text">
-                        <h2>See more looks</h2>
-                        <button
-                          type="button"
-                          class="btn btn-maroon text-dark rounded-pill d-flex mx-auto mt-4 fw-bold justify-content-center px-5 py-3"
-                        >
-                          See All
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            `;
-            con.appendChild(html);
-          }
+          // Toggle sections
+          sections.forEach(section => {
+            section.classList.add('d-none');
+            if(section.dataset.section === targetSection) {
+              section.classList.remove('d-none');
+            }
+          });
         });
       });
-  
-      // Trigger click on the first button to initialize the section
-      if (buttons.length > 0) {
-        buttons[0].click();
-      }
     });
   };
   
   handleDynamicSection();
-  
-
-
-
-  // 
-
-
-  const handleDynamicSectionBasedOnRoute = () => {
-    document.addEventListener('DOMContentLoaded', function () {
-      const buttons = document.querySelectorAll('.button_container button');
-      const heading = document.getElementById('lookbook-heading');
-      const con = document.querySelector('.row.mobile_tablet_padding.g-4.products');
-      const path = window.location.pathname;
-      
-      // Helper to get image path based on route
-      const getImageSrc = () => {
-        return path === "/index.html" ? "./assets/portrait_product_image.png" : "./../assets/portrait_product_image.png";
-      };
-  
-      // Add click listeners to buttons
-      buttons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-          const selectedText = button.innerText;
-          heading.textContent = selectedText;
-  
-          // Update button styles
-          buttons.forEach(btn => {
-            btn.classList.add('outlined');
-          });
-          button.classList.remove('outlined');
-          button.classList.add('btn-maroon');
-  
-          // Clear existing content
-          con.innerHTML = "";
-  
-          // Add product blocks based on button index
-          const count = index + 1;
-  
-          for (let i = 0; i < count; i++) {
-            const html = document.createElement("div");
-            html.className = "col-12 col-md-6 col-lg-3";
-            html.innerHTML = `
-              <div class="row">
-                <div class="col-12">
-                  <div class="hover-container">
-                    <img class="col-12" src="${getImageSrc()}" />
-                    <div class="hover-overlay">
-                      <div class="hover-text">
-                        <h2>See more looks</h2>
-                        <button
-                          type="button"
-                          class="btn btn-maroon text-dark rounded-pill d-flex mx-auto mt-4 fw-bold justify-content-center px-5 py-3"
-                        >
-                          See All
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            `;
-            con.appendChild(html);
-          }
-        });
-      });
-  
-      // Automatically select button based on route
-      let selectedIndex = 0; // default to first
-  
-      if (path.includes("summer_look")) {
-        selectedIndex = 1;
-      } else if (path.includes("winter_look")) {
-        selectedIndex = 4;
-      } else if (path.includes("abaya_look")) {
-        selectedIndex = 2;
-      } else if (path.includes("ramadhan_look")) {
-        selectedIndex = 3;
-      } else if (path.includes("sale")) {
-        selectedIndex = 5;
-      }
-  
-      if (buttons[selectedIndex]) {
-        buttons[selectedIndex].click();
-      }
-    });
-  };
-  
-  // handleDynamicSectionBasedOnRoute();
-  

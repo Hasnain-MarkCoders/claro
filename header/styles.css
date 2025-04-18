@@ -13,13 +13,25 @@
     margin-top: 100px !important;
 }
 .Archivist_custom_logo{
-    width: 200px;
+    width: 160px;
+    background-color: var(--dark-maroon);
+    height: 180px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;}
+.Archivist_custom_logo a{
+    width: 70%;
+    margin-left: 5px;
 }
 .Archivist_custom_logo img{
     width: 100%;
+    object-fit: contain;
 }
 .Archivist_custom_header{
-    padding: 20px;
+    padding:0px  20px;
 }
 :root {
     --primary-color: #000;
@@ -29,6 +41,8 @@
     list-style: none;
     display: flex;
     gap: 30px;
+    margin: 0px;
+    padding: 0;
 }
 .header_icons{
     display: flex;
@@ -41,8 +55,12 @@
     padding-left: 10px;
 }
 .Archivist_custom_header{
-    padding: 20px ;
+    padding:0px 20px  ;
 }
-        
+
+.Archivist_custom_logo{
+    width: 100px;
+    height: 150px;
+}        
   }
 
